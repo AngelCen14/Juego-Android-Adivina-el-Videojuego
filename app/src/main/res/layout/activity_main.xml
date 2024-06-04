@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutNombre"
+        app:layout_constraintVertical_bias="0.16">
+
+        <Button
+            android:id="@+id/botonTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:backgroundTint="#FF3D00"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="botonTutorialOnClick"
+            android:text="Como funciona el juego" />
+
+        <Button
+            android:id="@+id/botonPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:backgroundTint="#FF3D00"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="botonTablaPuntuacionesOnClick"
+            android:text="Tabla de puntuaciones" />
+
+        <Button
+            android:id="@+id/botonJugar"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:backgroundTint="#FF3D00"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="botonJugarOnClick"
+            android:text="JUGAR" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTituloJuego"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Adivina el Videojuego"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloJuego"
+        app:layout_constraintVertical_bias="0.076">
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="serif-monospace"
+            android:text="Tu nombre:"
+            android:textAllCaps="false"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
